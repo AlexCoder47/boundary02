@@ -1,7 +1,3 @@
-
-Copied!
-Original file line number 	Diff line number 	Diff line change
-@@ -0,0 +1,56 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include <iostream>
