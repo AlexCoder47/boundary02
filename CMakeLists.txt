@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(SOURCES
     DrawAllShapes.cpp
-    G19_Extensive_Hierarchy.cpp
     Main.cpp
     OpenGLCircle.cpp
     OpenGLSquare.cpp
