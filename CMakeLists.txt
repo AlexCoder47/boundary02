@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 if(BUILD_TESTS)
     include_directories(.)
-    add_library(main STATIC OpenGLCircle.h OpenGLSquare.h DrawAllShapes.h main.cpp)
+    add_library(DrawAllShapes STATIC DrawAllShapes.h DrawAllShapes.cpp)
     enable_testing()
     add_subdirectory(third-party/gtest)
     file(GLOB tests "tests/*.cpp")
