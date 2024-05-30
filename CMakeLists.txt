@@ -7,23 +7,21 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 if(BUILD_TESTS)
     include_directories(.)
-    add_library(dummy STATIC Dummy.h Dummy.cpp)
+    add_library(main STATIC OpenGLCircle.h OpenGLSquare.h DrawAllShapes.h main.cpp)
     enable_testing()
     add_subdirectory(third-party/gtest)
     file(GLOB tests "tests/*.cpp")
     foreach(test ${tests})
          add_executable(check ${test})
-         target_link_libraries(check gtest_main gmock_main dummy)
+         target_link_libraries(check gtest_main gmock_main main)
          add_test(NAME check COMMAND check)
     endforeach(test ${tests})
 else()
     set(SOURCES
-        Clipboard.cpp
-        ConceptualExample.cpp
-        Dummy.cpp
-        Program.cpp
-        RAII_File.cpp
-        RAII_Ofstream.cpp
+        Main.cpp
+        DrawAllShapes.cpp
+        OpenGLCircle.cpp
+        OpenGLSquare.cpp
     )
-    add_executable(RAII_Idiom_Project ${SOURCES})
+    add_executable(Cpp-Software-Design ${SOURCES})
 endif()
